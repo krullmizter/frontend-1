@@ -38,7 +38,8 @@ h6,
 p,
 a,
 li,
-input {
+input,
+button {
     font-size: 1.75rem;
 }
 

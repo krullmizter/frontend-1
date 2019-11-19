@@ -4,47 +4,53 @@ function decimalCal() {
 
     var input = Number(document.getElementById("decimalInput").value);
 
-    input = parseFloat(input);
+    inputFloat = parseFloat(input);
+    inputInt   = parseInt(input);
 
-    if (isNaN(input) || input % 1 == 0) {
+    console.log(inputInt);
+
+    if (isNaN(inputFloat) || inputFloat % 1 == 0) {
 
       document.getElementById("decimalResult").innerHTML = "Please enter a valid decimal number";
 
     } else { // Decimal Result
 
-        document.getElementById("decimalResult").innerHTML = input;
+        document.getElementById("decimalResult").innerHTML = inputFloat;
 
         // Square
 
-        let decimalSquare = input * input;
+        let decimalSquare = inputFloat * inputFloat;
         document.getElementById("decimalSquare").innerHTML = decimalSquare;
 
         // Root
 
-        let decimalSqrt = Math.sqrt(input);
+        let decimalSqrt = Math.sqrt(inputFloat);
         document.getElementById("decimalRoot").innerHTML = decimalSqrt;
 
         // Inverse
 
-        let decimalInverse = -input;
+        let decimalInverse = -inputFloat;
         document.getElementById("decimalInverse").innerHTML = decimalInverse;
 
         // Binary
 
-        let decimalBinary = input;
-
-        decimalBinary = parseInt(decimalBinary, 2);
+        let decimalBinary = inputInt;
+        decimalBinary.toString(2);
 
         document.getElementById("decimalBinary").innerHTML = decimalBinary;
 
         // Octal
 
-        let decimalOctal = input;
+        let decimalOctal = inputInt;
+        decimalOctal.toString(8);
+
         document.getElementById("decimalOctal").innerHTML = decimalOctal;
 
         // Hex
 
-        let decimalHex = input;
+        let decimalHex = inputInt;
+        decimalHex.toString(16);
+
         document.getElementById("decimalHex").innerHTML = decimalHex;
     }
 }
