@@ -1,6 +1,8 @@
+document.getElementById("calculate").addEventListener("click", people);
+
 function people() {
 
-    let firstName = [
+    const FIRSTNAME = [
         "Samuel",
         "Johannes",
         "Markus",
@@ -9,7 +11,7 @@ function people() {
         "Bill"
     ];
     
-    let lastName = [
+    const LASTNAME = [
         "Eriksson",
         "Newell",
         "Musk",
@@ -17,11 +19,18 @@ function people() {
         "Hendricks",
         "Tompson"
     ];
-        
-    const FIRSTNAMES = firstName.join(', ');
-    const LASTNAMES = lastName.join(', ');
 
-    const FULLNAME = FIRSTNAMES + LASTNAMES;
+    const FULLNAME = [];
+    let names = 0;
+    
+    for (i = 0; i < FIRSTNAME.length; i++) {
 
-    document.getElementById("peopleOutput").innerHTML = FULLNAME;
+        const RANDOM = Math.floor((Math.random() * FIRSTNAME.length));
+
+        FULLNAME[i] = FIRSTNAME[i] + " " + LASTNAME[RANDOM];
+
+        names = FULLNAME.join(", ");
+    }
+
+    document.getElementById("peopleOutput").innerHTML = names;
 }

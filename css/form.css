@@ -16,8 +16,7 @@ form {
     align-items: center;
 }
 
-form input,
-form button {
+form input {
     padding: 1rem 1.75rem;
     border: 1px solid var(--transparent);
     border-radius: 4.7rem;
@@ -31,7 +30,7 @@ form input[type="number"]:focus {
     box-shadow: 0 0 8px var(--gold-primary);
 }
 
-form button,
+form input[type=submit],
 form input[type=reset] {
     margin-top: 2.5rem;
     cursor: pointer;
@@ -41,7 +40,7 @@ form input[type=reset] {
     color: var(--black);
 }
 
-form button:hover,
+form input[type=submit]:hover,
 form input[type=reset]:hover  {
     background-color: var(--gold-primary);
 }

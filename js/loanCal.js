@@ -30,7 +30,7 @@ function dueDate() {
     let date        = WHOLEDATE.getDate();
     let finalDate   = date + '.' + (WHOLEDATE.getMonth() +1) + '.' + WHOLEDATE.getFullYear();
 
-    if (WEEKDAY === 6 || WEEKDAY === 0) {
+    if (WEEKDAY == 6 || WEEKDAY == 0) {
 
         date++;
         finalDate;
@@ -42,26 +42,36 @@ function dueDate() {
     }
 
     document.getElementById("loanDue").innerHTML = finalDate;
-
-    /*console.log(DATEINPUT);
-    console.log(WHOLEDATE);
-    console.log(WEEKDAY);
-    console.log(date);
-    console.log(finalDate);*/
-
 }
 
 function reference() {
 
-    const REF1 = Math.floor(Math.random() * 1000) + 1000;
+    const REF1      = [Math.floor(Math.random() * (9999 - 1000) + 1000)].toString();
+    const REF2      = [Math.floor(Math.random() * (9999 - 1000) + 1000)].toString();
+    const REF3      = [Math.floor(Math.random() * (9999 - 1000) + 1000)].toString();
+    const JOINARRAY = (REF1 + REF2 + REF3).split("");
+    const MULTI     = [1, 3, 7];
 
-    const REF2 = Math.floor(Math.random() * 1000) + 1000;
+    let controlNum = 0;
 
-    const REF3 = Math.floor(Math.random() * 1000) + 1000;
+    for (i = 0; i < JOINARRAY.length; i++) {
 
-    const REF4 = Math.floor(Math.random() * 99) + 10;
+        controlNum += JOINARRAY[i] * MULTI[i % 3];
 
-    const REFRESULT = REF1 + '-' + REF2 + '-' + REF3 + '-' + REF4;
+        controlNum = (10 - controlNum % 10) % 10;
+
+    }
+
+    const REFRESULT = REF1 + '-' + REF2 + '-' + REF3 + '-' + controlNum;
 
     document.getElementById("loanReference").innerHTML = REFRESULT;
+
+    /*
+    sum += jointarray[0] * three[0];
+    sum += jointarray[1] * three[1];
+    sum += jointarray[2] * three[2];
+    sum += jointarray[3] * three[0];
+
+    const REF4 = Math.floor(Math.random() * 99) + 10;
+    */
 }

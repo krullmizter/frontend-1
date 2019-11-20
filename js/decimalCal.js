@@ -2,55 +2,55 @@ document.getElementById("calculate").addEventListener("click", decimalCal);
 
 function decimalCal() {
 
-    var input = Number(document.getElementById("decimalInput").value);
+    const INPUT = document.getElementById("decimalInput").value;
 
-    inputFloat = parseFloat(input);
-    inputInt   = parseInt(input);
+    let inputParsed = INPUT.replace(',', '.');
+    let inputInt    = parseInt(inputParsed);
 
-    console.log(inputInt);
-
-    if (isNaN(inputFloat) || inputFloat % 1 == 0) {
+    if (isNaN(inputInt) || INPUT % 1 == 0 ) {
 
       document.getElementById("decimalResult").innerHTML = "Please enter a valid decimal number";
 
-    } else { // Decimal Result
+    } else { 
+      
+    // Decimal Result
 
-        document.getElementById("decimalResult").innerHTML = inputFloat;
+    document.getElementById("decimalResult").innerHTML = inputParsed;
 
-        // Square
+    // Square
 
-        let decimalSquare = inputFloat * inputFloat;
-        document.getElementById("decimalSquare").innerHTML = decimalSquare;
+    let decimalSquare = inputParsed * inputParsed;
+    document.getElementById("decimalSquare").innerHTML = decimalSquare;
 
-        // Root
+    // Root
 
-        let decimalSqrt = Math.sqrt(inputFloat);
-        document.getElementById("decimalRoot").innerHTML = decimalSqrt;
+    let decimalSqrt = Math.sqrt(inputParsed);
+    document.getElementById("decimalRoot").innerHTML = decimalSqrt;
 
-        // Inverse
+    // Inverse
 
-        let decimalInverse = -inputFloat;
-        document.getElementById("decimalInverse").innerHTML = decimalInverse;
+    let decimalInverse = -inputParsed;
+    document.getElementById("decimalInverse").innerHTML = decimalInverse;
 
-        // Binary
+    // Binary
 
-        let decimalBinary = inputInt;
-        decimalBinary.toString(2);
+    let decimalBinary = inputInt;
+    decimalBinary.toString(2);
 
-        document.getElementById("decimalBinary").innerHTML = decimalBinary;
+    document.getElementById("decimalBinary").innerHTML = decimalBinary;
 
-        // Octal
+    // Octal
 
-        let decimalOctal = inputInt;
-        decimalOctal.toString(8);
+    let decimalOctal = inputInt;
+    decimalOctal.toString(8);
 
-        document.getElementById("decimalOctal").innerHTML = decimalOctal;
+    document.getElementById("decimalOctal").innerHTML = decimalOctal;
 
-        // Hex
+    // Hex
 
-        let decimalHex = inputInt;
-        decimalHex.toString(16);
+    let decimalHex = inputInt;
+    decimalHex.toString(16);
 
-        document.getElementById("decimalHex").innerHTML = decimalHex;
+    document.getElementById("decimalHex").innerHTML = decimalHex;
     }
 }
