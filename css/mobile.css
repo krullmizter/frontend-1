@@ -11,7 +11,7 @@
 @media screen and (max-width: 980px) {
     header,
     main {
-        padding: 0 1rem;
+        padding: 5rem 1rem;
     }
 
     .col {
@@ -21,8 +21,13 @@
 
 @media screen and (max-width: 400px) {
     .form_col {
-        flex-direction: column;
-        align-items: initial;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: initial;
+            -ms-flex-align: initial;
+                align-items: initial;
     }
 
     .form_col p {

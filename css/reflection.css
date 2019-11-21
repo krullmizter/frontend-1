@@ -1,0 +1,18 @@
+.reflection {
+    padding: 5%;
+}
+
+.reflection h1 {
+    margin-bottom: 5px;
+}
+
+.reflection ul {
+    list-style: initial;
+    padding: 1.5rem 0 1.5rem 3.5rem;
+    margin: inherit;
+}
+
+.reflection p,
+.reflection li {
+    color: var(--white);
+}

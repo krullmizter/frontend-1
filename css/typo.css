@@ -51,12 +51,18 @@ a {
     text-decoration: none;
 }
 
+li a {
+    text-decoration: underline;
+}
+
 input {
     font-family: 'Signika', sans-serif;
 }
 
-.col h3 {
-    margin-bottom: 2.5rem;    
+.col h3,
+.col h4,
+.col h5 {
+    margin-bottom: 1.5rem;    
 }
 
 .col:nth-child(1) p {

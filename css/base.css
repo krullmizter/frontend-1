@@ -5,7 +5,8 @@
 html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 62.5%;
 }
@@ -17,6 +18,7 @@ header {
 body {
     margin: 0;
     padding: 0;
+    background: -webkit-gradient(linear,left bottom, left top,from(rgba(15,10,15,0.25)), to(rgba(15,10,15,0.25))), url("../images/moneyRain.gif") no-repeat center;
     background: linear-gradient(0deg,rgba(15,10,15,0.25), rgba(15,10,15,0.25)), url("../images/moneyRain.gif") no-repeat center;
     background-size: cover;
     font-family: 'Signika', sans-serif;

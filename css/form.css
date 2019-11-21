@@ -1,25 +1,41 @@
 form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .form_col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 2rem;
     position: relative;
 }
 
 .form_col-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 form input {
     padding: 1rem 1.75rem;
     border: 1px solid var(--transparent);
     border-radius: 4.7rem;
+    -webkit-transition: .2s;
     transition: .2s;
 }
 
@@ -27,7 +43,8 @@ form input[type="text"]:focus,
 form input[type="number"]:focus {
     border-color: var(--gold-primary);
     outline: none;
-    box-shadow: 0 0 8px var(--gold-primary);
+    -webkit-box-shadow: 0 0 8px var(--gold-primary);
+            box-shadow: 0 0 8px var(--gold-primary);
 }
 
 form input[type=submit],
@@ -36,6 +53,7 @@ form input[type=reset] {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
+    -webkit-transition: .2s;
     transition: .2s;
     color: var(--black);
 }
