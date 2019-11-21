@@ -18,8 +18,8 @@ header {
 body {
     margin: 0;
     padding: 0;
-    background: -webkit-gradient(linear,left bottom, left top,from(rgba(15,10,15,0.25)), to(rgba(15,10,15,0.25))), url("../images/moneyRain.gif") no-repeat center;
-    background: linear-gradient(0deg,rgba(15,10,15,0.25), rgba(15,10,15,0.25)), url("../images/moneyRain.gif") no-repeat center;
+    background: -webkit-gradient(linear,left bottom, left top,from(rgba(15,10,15,0.4)), to(rgba(15,10,15,0.4))), url("../images/moneyRain.gif") no-repeat center;
+    background: linear-gradient(0deg,rgba(15,10,15,0.4), rgba(15,10,15,0.4)), url("../images/moneyRain.gif") no-repeat center;
     background-size: cover;
     font-family: 'Signika', sans-serif;
 }
