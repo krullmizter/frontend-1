@@ -36,6 +36,13 @@ function decimalCal() {
 
     let decimalBinary = inputInt;
     decimalBinary.toString(2);
+    
+    console.log(decimalBinary);
+    /*if (decimalBinary != 0) {
+      
+      decimalBinary = decimalBinary % 8;
+
+    }*/
 
     document.getElementById("decimalBinary").innerHTML = decimalBinary;
 

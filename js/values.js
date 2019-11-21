@@ -6,7 +6,7 @@ function changeValues() {
     let nameInput   = document.getElementById("nameInput").value
     let nameSplit   = nameInput.split(" ").reverse().join(" ");
     let nameResult  = document.getElementById("nameResult");
-    
+
     nameResult.style.textTransform = "capitalize";
 
     nameResult.innerHTML = nameSplit;
@@ -32,15 +32,31 @@ function changeValues() {
     
     if (colorInput.includes(',')) {
 
-        let array = colorInput.split(', ');
+        let array       = colorInput.split(', ');
+        let a1          = parseInt(array[0], 10).toString(16);
+        let a2          = parseInt(array[1], 10).toString(16);
+        let a3          = parseInt(array[2], 10).toString(16); 
+        let transparent = parseInt(array[3], 10).toString(16);
 
-        let a1 = parseInt(array[0], 10).toString(16);
-        let a2 = parseInt(array[1], 10).toString(16);
-        let a3 = parseInt(array[2], 10).toString(16);
+        let COLORHEX     = '#' + a1 + a2 + a3;
 
-        const COLOR = "#" + a1 + a2 + a3;
+        document.getElementById("contract").style.backgroundColor = COLORHEX;
 
-        document.getElementById("contract").style.backgroundColor = COLOR;
+        if (array.length > 3) {
+
+            let COLORRGBA = array + transparent;
+
+            if (colorInput.length > 16) {
+
+                if (colorInput.includes('.')) {
+
+                    COLORRGBA = colorInput.replace('.', '0.');
+
+                } 
+
+                document.getElementById("contract").style.backgroundColor = 'rgba(' + COLORRGBA + ')';
+            }
+        }
 
     } else {
 
@@ -63,7 +79,7 @@ function ssn() {
 
     if (SPLIT[0] <= 0 || SPLIT[0] >= 31 || SPLIT[1] <= 0 || SPLIT[1] > 12  || SPLIT[2] < 0 || INPUTLENGHT < 11) {
 
-        document.getElementById("ssnResult").innerHTML = "Faulty SSN";
+        document.getElementById("ssnResult").innerHTML = "Faulty SSN!";
 
     } else {
 
@@ -71,7 +87,7 @@ function ssn() {
 
         if (GENDER % 2) {
 
-            document.getElementById("ectInfo").innerHTML = "(He is a Male, and his birthday is on a)";
+            document.getElementById("ectInfo").innerHTML = "(He is a Male)";
         
         } else {
 
